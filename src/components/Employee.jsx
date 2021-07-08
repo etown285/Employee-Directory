@@ -42,12 +42,28 @@ class Employee extends Component {
           this.setState({ filtered: sortedEmployees })
     }
 
+    sortAge = () => {
+        
+        const sortedEmployees = this.state.employees.sort(function(a, b) {
+            // Dig into the object and pull out each AGE
+            var ageA = a.dob.age;
+            var ageB = b.dob.age;
+
+            // Return Employee by Age (decending)
+            return ageB - ageA;
+          });
+
+          // Update the filtered state
+          this.setState({ filtered: sortedEmployees })
+    }
+
     render () { 
         return (
             <div>
                 <h2>Employee Component</h2>
                 <Detail data={this.state.employees}/>
-                <button onClick={this.sortAlphabetically}>Sort Employees </button>
+                <button onClick={this.sortAlphabetically}>Sort By First Name </button>
+                <button onClick={this.sortAge}>Sort By Age </button>
             </div>
         )
     }

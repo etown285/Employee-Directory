@@ -9,7 +9,10 @@ function Detail(props) {
         <div>
             <h3>Detail Compnent</h3>
             { props.data.map( empObj => (
-                <p>{empObj.name.first} {empObj.name.last}</p>
+                <li>
+                    <p>{empObj.name.first} {empObj.name.last}</p>
+                    <p>{empObj.dob.age}</p>
+                </li>
             ))}
         </div>
     )
