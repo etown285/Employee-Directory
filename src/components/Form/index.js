@@ -7,7 +7,7 @@ class Form extends Component {
     }
 
     handleInputChange = event => {
-        console.log(event.target);
+        console.log(event.target.value);
         this.setState({
             searchTerm: event.target.value
         })

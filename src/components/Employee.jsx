@@ -8,7 +8,8 @@ class Employee extends Component {
     // We can store State (data)
     state = {
         employees: [],
-        filtered: []
+        filtered: [],
+        searchTerm: ''
     }
 
     // Life Cycle Methods
@@ -23,6 +24,41 @@ class Employee extends Component {
                 this.setState({ employees: data.data.results });
             })
     }
+
+    handleInputChange = event => {
+        console.log(event.target.value);
+        let value = event.target.value;
+        
+        let filteredData = this.state.employees.filter( employee => {
+            // the Filter methoed returns either true or false
+            return employee.name.last.toLowerCase().indexOf(value.toLowerCase()) === 0;
+        
+        })
+
+        this.setState({
+            searchTerm: event.target.value,
+            filtered: filteredData
+        })
+    };
+
+    // Filtering Employees by Last Name
+    filterInput = () => {
+
+            let filteredData = this.state.employees.filter( employee => {
+                // the Filter methoed returns either true or false
+                console.log(employee.name.last);
+                return employee.name.last.toLowerCase().indexOf(this.state.searchTerm.toLowerCase())
+
+            })
+
+            console.log(filteredData);
+
+            // Update our State of the our Filtered Employees
+            this.setState({
+                filtered: filteredData
+            })
+    }
+
 
     sortAlphabetically = () => {
         
@@ -61,9 +97,19 @@ class Employee extends Component {
         return (
             <div>
                 <h2>Employee Component</h2>
+                <div>
+                <input
+                        value={this.state.searchTerm}
+                        name="search"
+                        onChange={this.handleInputChange}
+                        type="text"
+                        placeholder="Enter Search"
+                    />
+                </div>
                 <Detail data={this.state.employees}/>
                 <button onClick={this.sortAlphabetically}>Sort By First Name </button>
                 <button onClick={this.sortAge}>Sort By Age </button>
+                <button onClick={this.filterInput}>Filter Data</button>
             </div>
         )
     }
