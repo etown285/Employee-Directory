@@ -1,4 +1,5 @@
 import React from 'react';
+import './Detail.css';
 
 
 function Detail(props) {
@@ -7,10 +8,11 @@ function Detail(props) {
 
     return (
         <div>
-            <h3>Detail Compnent</h3>
+            <h3>Detail Component</h3>
             { props.data.map( empObj => (
-                <li>
+                <li key={empObj.email} className="list-item">
                     <p>{empObj.name.first} {empObj.name.last}</p>
+                    <p>{empObj.email}</p>
                     <p>{empObj.dob.age}</p>
                 </li>
             ))}

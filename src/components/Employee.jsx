@@ -106,7 +106,13 @@ class Employee extends Component {
                         placeholder="Enter Search"
                     />
                 </div>
-                <Detail data={this.state.employees}/>
+
+                { this.state.filtered.length > 0 ? 
+                    <Detail data={this.state.filtered}/>
+                    :
+                    <Detail data={this.state.employees}/>
+                }
+
                 <button onClick={this.sortAlphabetically}>Sort By First Name </button>
                 <button onClick={this.sortAge}>Sort By Age </button>
                 <button onClick={this.filterInput}>Filter Data</button>
