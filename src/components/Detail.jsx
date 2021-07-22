@@ -11,6 +11,7 @@ function Detail(props) {
             <h3>Detail Component</h3>
             { props.data.map( empObj => (
                 <li key={empObj.email} className="list-item">
+                    <p><img src={empObj.picture.thumbnail} alt={empObj.name.first} /></p>
                     <p>{empObj.name.first} {empObj.name.last}</p>
                     <p>{empObj.email}</p>
                     <p>{empObj.dob.age}</p>
