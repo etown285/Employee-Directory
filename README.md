@@ -7,7 +7,10 @@ Employee directory using react allowing the user to sort employees by category a
 
 ### Project Overview
 
-* Uses REACT 
+* Allows user to sort employees by First Name and Age
+* Use can filter employees by last name by typing into the search for easier access. 
+* Application uses REACT to filter to navigate and connect to the employees. 
+* Uses REACT components that allow the application to responds to user events. 
 
 ## Usage
 

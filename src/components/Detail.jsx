@@ -10,12 +10,14 @@ function Detail(props) {
         <div>
             <h3>Detail Component</h3>
             { props.data.map( empObj => (
-                <li key={empObj.email} className="list-item">
-                    <p><img src={empObj.picture.thumbnail} alt={empObj.name.first} /></p>
-                    <p>{empObj.name.first} {empObj.name.last}</p>
-                    <p>{empObj.email}</p>
-                    <p>{empObj.dob.age}</p>
-                </li>
+                <table key={empObj.email} className="list-item">
+                    <tr>
+                        <th><img src={empObj.picture.thumbnail} alt={empObj.name.first} /></th>
+                        <th>{empObj.name.first} {empObj.name.last}</th>
+                        <th>{empObj.email}</th>
+                        <th>{empObj.dob.age}</th>
+                    </tr>
+                </table>
             ))}
         </div>
     )
