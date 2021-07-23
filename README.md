@@ -3,18 +3,19 @@
 
 ## Description 
 
-Employee directory using react allowing the user to sort employees by category and properties for sorting . 
+Employee directory using react allowing the user to sort employees by category and properties for sorting. 
 
 ### Project Overview
 
-* Allows user to sort employees by First Name and Age
+* Employee image is rendered to identify each employee. 
+* Allows user to sort employees by First Name, Age, and Email.
 * Use can filter employees by last name by typing into the search for easier access. 
 * Application uses REACT to filter to navigate and connect to the employees. 
-* Uses REACT components that allow the application to responds to user events. 
+* Uses REACT components that allow the application to respond to user events. 
 
 ## Usage
 
-![Screenshot]()
+![Screenshot](https://github.com/etown285/Employee-Directory/blob/main/assets/ReactEmployeeDirectory%20.gif)
 
 ## Links
 
