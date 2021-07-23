@@ -20,6 +20,8 @@ Employee directory using react allowing the user to sort employees by category a
 
 
 * GitHub Repository URL: (https://github.com/etown285/Employee-Directory)
+* Deployed Application: (https://limitless-gorge-15394.herokuapp.com/)
+
 
 
 License
